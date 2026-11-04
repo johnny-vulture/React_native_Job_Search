@@ -1,15 +1,33 @@
-# Expo Router Example
+# React Native Job Search
 
-Use [`expo-router`](https://expo.github.io/router) to build native navigation using files in the `app/` directory.
+A React Native job search app built with Expo and Expo Router. Browse popular and nearby roles, search by keyword or job type, and open detailed listings powered by the [JSearch](https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch) API on RapidAPI.
 
-## 🚀 How to use
+## Features
 
-```sh
-npx create-react-native-app -t with-router
-```
+- Home screen with personalized welcome, search bar, and job-type filters (Full-time, Part-time, Contractor)
+- Popular jobs carousel and nearby jobs list
+- Search results with pagination
+- Job details with About, Qualifications, and Responsibilities tabs
+- Apply button that opens the listing URL
+- Pull-to-refresh on the job details screen
+- Custom DM Sans typography and themed UI
 
-## 📝 Notes
+## Tech Stack
 
-- [Expo Router: Docs](https://expo.github.io/router)
-- [Expo Router: Repo](https://github.com/expo/router)
-- [Request for Comments](https://github.com/expo/router/discussions/1)
+- React Native / Expo
+- Expo Router (file-based navigation)
+- Axios
+- JSearch API (RapidAPI)
+
+## Project Structure
+
+```text
+app/                 # Screens (Expo Router)
+  index.js           # Home
+  search/[id].js     # Search results
+  job-details/[id].js
+components/          # UI components (home, cards, job details)
+constants/           # Theme, icons, images
+hook/useFetch.js     # Shared API fetch hook
+styles/              # Shared styles
+assets/              # Fonts, icons, images
